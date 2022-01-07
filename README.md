@@ -5,7 +5,7 @@ Projeto para teste no desenvolviemento fullstack web.  O projeto utiliza: Reactj
 Github Profile tem objetivo de entender e aprender a desenvolver o consumo de API
 O projeto utiliza: React, Styled Components, Axios, React-Router-DOM e React-Icons.
 
-Deploy in [vercel](https://gerapix.vercel.app/)
+Deploy in [vercel GitHub Profile](https://github-profile-ochre.vercel.app/)
 
 
 
