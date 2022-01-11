@@ -7,10 +7,10 @@ import { context } from '../context';
 
 const Repos = () => {
     const ctx = useContext(context);
-
+    console.log(ctx.userRepos);
     return (
         <Container>
-            <ReposContainer name="Anthony Vinicius" repos={ctx.userRepos} />
+            <ReposContainer name={ctx.userData?.name}  repos={ctx.userRepos} />
         </Container>
     );
 }

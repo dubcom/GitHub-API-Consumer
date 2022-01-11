@@ -15,7 +15,7 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 10px;
     color: #444;
     width: 100%;

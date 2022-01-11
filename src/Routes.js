@@ -7,12 +7,14 @@ import {
 
 import Home from './pages/home';
 import Repos from './pages/repos';
+import UserList from './pages/user';
 
 const Routes = () => (
     <BRouter>
         <Switch>
             <Route path="/" exact component={ Home } />
             <Route path="/repos" component={ Repos } />
+            <Route path="/user" component={ UserList } />
         </Switch>
     </BRouter>
 )

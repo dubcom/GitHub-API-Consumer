@@ -9,7 +9,7 @@ import {
     HeaderInput
 } from './styles';
 
-import {api, apiUserList} from '../../services/client';
+import {api } from '../../services/client';
 
 import { context } from '../../context';
 
@@ -20,13 +20,11 @@ const Header = props => {
     useEffect(() => {
         (async function getUserData() {
             try {
-                const response = await api.get(`/${props.username}`);
+                const response = await api.get(`${props.username}`);
                 const repos = await api.get(`/${props.username}/repos`);
-                const usersData = await apiUserList.get(`/users?q=${props.username}&page=1`);
- 
+ console.log(response.data);
                 ctx.setUserData(response.data);
                 ctx.setUserRepos(repos.data);
-                ctx.setUsersData(usersData.data);
             } catch(err) {
                 console.log(err);
             }
@@ -38,9 +36,8 @@ const Header = props => {
             <HeaderTitle>Github Profile</HeaderTitle>
             <HeaderInputContainer>
                 <HeaderInput type="text" value={searchValue} onChange={e => setSearchValue(e.target.value)} />
-        
 
-                <Link to={`user/?username=${searchValue}`}>
+                <Link to={`/?username=${searchValue}`}>
                     <FiSearch size={15} />
                 </Link>
             </HeaderInputContainer>

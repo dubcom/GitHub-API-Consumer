@@ -8,17 +8,20 @@ import UserPicture from '../components/userPicture';
 import UserDetails from '../components/userDetails';
 import UserNumbers from '../components/userNumbers';
 
+
 import { context } from '../context';
 
 export default function Home() {
     const ctx = useContext(context);
     const query = useQuery();
+    
 
     return (
         <Container>
             <Header username={query.get('username')} />
 
             <UserContainer>
+                
                 {ctx.userData?.name ?
                     <React.Fragment>
                         <UserPicture url={ctx.userData?.avatar_url} />
